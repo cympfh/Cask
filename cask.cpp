@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <fstream>
 using namespace std;
 
 #define INF (1<<20)
@@ -32,64 +34,64 @@ void solve(const string& line) {
   for (string w: awa) {
     int p = line.find(w);
     if (p == string::npos) continue;
-    if (cvs_b1 < p) ret = add(ret, shift(AWA));
-    else if (cvs_b2 > p) ret = add(ret, shift(AWA));
+    if (cvs_b1 && cvs_pos1 < p) ret = add(ret, shift(AWA));
+    else if (cvs_b2 && cvs_pos2 > p) ret = add(ret, shift(AWA));
     else ret.awa++;
   }
   for (string w: suk) {
     int p = line.find(w);
     if (p == string::npos) continue;
-    if (cvs_b1 < p) ret = add(ret, shift(SUK));
-    else if (cvs_b2 > p) ret = add(ret, shift(SUK));
+    if (cvs_b1 && cvs_pos1 < p) ret = add(ret, shift(SUK));
+    else if (cvs_b2 && cvs_pos2 > p) ret = add(ret, shift(SUK));
     else ret.suk++;
   }
   for (string w: kow) {
     int p = line.find(w);
     if (p == string::npos) continue;
-    if (cvs_b1 < p) ret = add(ret, shift(KOW));
-    else if (cvs_b2 > p) ret = add(ret, shift(KOW));
+    if (cvs_b1 && cvs_pos1 < p) ret = add(ret, shift(KOW));
+    else if (cvs_b2 && cvs_pos2 > p) ret = add(ret, shift(KOW));
     else ret.kow++;
   }
   for (string w: yas) {
     int p = line.find(w);
     if (p == string::npos) continue;
-    if (cvs_b1 < p) ret = add(ret, shift(YAS));
-    else if (cvs_b2 > p) ret = add(ret, shift(YAS));
+    if (cvs_b1 && cvs_pos1 < p) ret = add(ret, shift(YAS));
+    else if (cvs_b2 && cvs_pos2 > p) ret = add(ret, shift(YAS));
     else ret.yas++;
   }
   for (string w: iya) {
     int p = line.find(w);
     if (p == string::npos) continue;
-    if (cvs_b1 < p) ret = add(ret, shift(IYA));
-    else if (cvs_b2 > p) ret = add(ret, shift(IYA));
+    if (cvs_b1 && cvs_pos1 < p) ret = add(ret, shift(IYA));
+    else if (cvs_b2 && cvs_pos2 > p) ret = add(ret, shift(IYA));
     else ret.iya++;
   }
   for (string w: tak) {
     int p = line.find(w);
     if (p == string::npos) continue;
-    if (cvs_b1 < p) ret = add(ret, shift(TAK));
-    else if (cvs_b2 > p) ret = add(ret, shift(TAK));
+    if (cvs_b1 && cvs_pos1 < p) ret = add(ret, shift(TAK));
+    else if (cvs_b2 && cvs_pos2 > p) ret = add(ret, shift(TAK));
     else ret.tak++;
   }
   for (string w: odo) {
     int p = line.find(w);
     if (p == string::npos) continue;
-    if (cvs_b1 < p) ret = add(ret, shift(ODO));
-    else if (cvs_b2 > p) ret = add(ret, shift(ODO));
+    if (cvs_b1 && cvs_pos1 < p) ret = add(ret, shift(ODO));
+    else if (cvs_b2 && cvs_pos2 > p) ret = add(ret, shift(ODO));
     else ret.odo++;
   }
   for (string w: haj) {
     int p = line.find(w);
     if (p == string::npos) continue;
-    if (cvs_b1 < p) ret = add(ret, shift(HAJ));
-    else if (cvs_b2 > p) ret = add(ret, shift(HAJ));
+    if (cvs_b1 && cvs_pos1 < p) ret = add(ret, shift(HAJ));
+    else if (cvs_b2 && cvs_pos2 > p) ret = add(ret, shift(HAJ));
     else ret.haj++;
   }
   for (string w: yor) {
     int p = line.find(w);
     if (p == string::npos) continue;
-    if (cvs_b1 < p) ret = add(ret, shift(YOR));
-    else if (cvs_b2 > p) ret = add(ret, shift(YOR));
+    if (cvs_b1 && cvs_pos1 < p) ret = add(ret, shift(YOR));
+    else if (cvs_b2 && cvs_pos2 > p) ret = add(ret, shift(YOR));
     else ret.yor++;
   }
 
